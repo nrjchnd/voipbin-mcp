@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mcp-server:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - VOIPBIN_API_URL=${VOIPBIN_API_URL:-https://api.voipbin.net/v1.0}
+      - VOIPBIN_API_KEY=${VOIPBIN_API_KEY}
+      - PORT=8000
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/sse"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M 
