@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/nrjchnd-voipbin-mcp-badge.png)](https://mseep.ai/app/nrjchnd-voipbin-mcp)
+
 # VoIPBin MCP Server
 
 A Model Context Protocol (MCP) server implementation for the VoIPBin API, enabling AI models to interact with VoIP services.
