@@ -1,4 +1,6 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/nrjchnd-voipbin-mcp-badge.png)](https://mseep.ai/app/nrjchnd-voipbin-mcp)
+# VoIPBin MCP Server
+![VoIPBin MCP Server (MseeP.ai Security Assessment Badge)](src/assets/images/voipbin-mseep-ai.png)
+
 
 # VoIPBin MCP Server
 
